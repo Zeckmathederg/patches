@@ -1,0 +1,37 @@
+From 5123b543c7faa3412a1545cf4815a5dbfcd2a099 Mon Sep 17 00:00:00 2001
+From: Zeckmathederg <zeckmaisreal@gmail.com>
+Date: Sun, 9 Jun 2024 05:30:48 -0600
+Subject: [PATCH] Added info regarding tarball extraction in
+ part3intro/generalinstructions.xml
+
+---
+ part3intro/generalinstructions.xml | 13 ++++++++++---
+ 1 file changed, 10 insertions(+), 3 deletions(-)
+
+diff --git a/part3intro/generalinstructions.xml b/part3intro/generalinstructions.xml
+index 37e07f862..f6e1b9227 100644
+--- a/part3intro/generalinstructions.xml
++++ b/part3intro/generalinstructions.xml
+@@ -107,9 +107,16 @@
+           <para>For each package:</para>
+           <orderedlist numeration="loweralpha" spacing="compact">
+             <listitem>
+-              <para>Using the <command>tar</command> program, extract the package
+-              to be built.  In <xref linkend="chapter-cross-tools"/> and
+-              <xref linkend="chapter-temporary-tools"/>, ensure you are
++              <para>Use <userinput>tar -xf <replaceable>&lt;PACKAGE&gt;</replaceable>
++              </userinput> to extract the package to be built. <userinput>
++              <replaceable>&lt;PACKAGE&gt;</replaceable></userinput> will usually
++              be the package name in lowercase, unless otherwise specified,
++              followed by the version number, and <filename>.tar.<replaceable>
++              &lt;COMPRESSION_FORMAT&gt;</replaceable></filename>. The <filename>
++              <replaceable>&lt;COMPRESSION_FORMAT&gt;</replaceable></filename>
++              will usually be <filename>gz</filename>, <filename>xz</filename>,
++              and <filename>bz2</filename>. In <xref linkend="chapter-cross-tools"/>
++              and <xref linkend="chapter-temporary-tools"/>, ensure you are
+               the <emphasis>lfs</emphasis> user when extracting the package.</para>
+             <para>Do not use any method except the <command>tar</command> command
+               to extract the source code. Notably, using the <command>cp -R</command>
+-- 
+2.43.0
+
